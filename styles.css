@@ -30,25 +30,15 @@ body {
 
 /* Menu and toogler css */
 
-.nav-container {
-    margin-right: 2.5%;
-}
-
-.container {
-    width: 93%;
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
 header {
-    color: #1f1f1c;
     position: relative;
 }
 
-header::after {
-    content: '';
-    clear: both;
-    display: block;
+.nav-container {
+    /* margin-right: 2.5%; */
+    width: 93%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .site-nav {
@@ -95,7 +85,7 @@ header::after {
 
 .site-nav a:hover,
 .site-nav a:focus {
-    color: var(--nuetral-clr-Very-dark-blue);
+    color: var(--primary-color-red);
 }
 
 .menu-toggle {
@@ -183,7 +173,7 @@ header::after {
     }
     .site-nav a:hover,
     .site-nav a:focus {
-        background: transparent;
+        color: var(--primary-color-red);
     }
     .site-nav--icon {
         display: none;
@@ -193,9 +183,16 @@ header::after {
 
 /* company logo....... */
 
+.company-logo-container,
+.container,
+section {
+    width: 93%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .company-logo {
     position: relative;
-    left: 3.6%;
     margin: 2.5rem 0 2.5rem;
     width: 50px;
 }
@@ -207,12 +204,13 @@ h1 {
     font-size: 50px;
     font-weight: 800;
     padding-left: 0 !important;
+    line-height: 1;
 }
 
 p {
     font-size: var(--font-size-paragraph);
     color: var(--nuetral-clr-Dark-grayish-blue);
-    line-height: 2;
+    line-height: 1.5;
 }
 
 img {
@@ -227,6 +225,12 @@ button {
     letter-spacing: 3px;
     border: none;
     margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background: var(--nuetral-clr-Very-dark-blue);
 }
 
 aside {
@@ -251,14 +255,17 @@ aside {
     color: var(--nuetral-clr-Off-white);
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.aside-div>h3:hover {
+    color: var(--primary-color-orange);
 }
 
 .aside-div>p {
-    font-size: 13px;
-}
-
-section {
-    margin: 5rem 0;
+    font-size: 15px;
+    line-height: 2;
+    padding: .5rem 0;
 }
 
 .heading {
@@ -276,7 +283,7 @@ section {
 @media(min-width: 912px) {
     .container {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 2fr 1fr;
         gap: 2rem;
     }
 }
@@ -301,15 +308,13 @@ section {
 section {
     display: grid;
     gap: 2rem;
-    width: 93%;
-    max-width: 1300px;
     margin: 4rem auto;
 }
 
 @media(min-width: 500px) {
     section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 23rem));
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 21rem));
     }
 }
 
@@ -329,6 +334,11 @@ section {
     font-size: 18px;
     font-weight: 600;
     color: var(--nuetral-clr-Very-dark-blue);
+    cursor: pointer;
+}
+
+.services>h3:hover {
+    color: var(--primary-color-red);
 }
 
 .services>p {
@@ -337,6 +347,9 @@ section {
 }
 
 .attribution {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
     background-color: var(--nuetral-clr-grayish-blue);
     padding: .5rem 0;
     font-size: 11px;
